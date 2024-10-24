@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>crud dashboard</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/custom.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <!-------sidebar--design------------>
+
+		<div id="sidebar">
+
+			<div class="sidebar-header">
+				<h3 class="d-flex justify-content-center align-items-center "><i
+						class="material-icons fa-solid fa-layer-group" style="color: #84aef2;"></i><span class="pl-1">
+						AppStack</span></h3>
+			</div>
+
+			<ul class="list-unstyled component m-0">
+				<li class="active">
+					<a href="#" class="dashboard d-flex">
+						<i class="material-icons">dashboard</i>dashboard
+						<span id="nav-nt">5</span></a>
+				</li>
+
+				<li class="dropdown">
+					<a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<i class="material-icons fa-solid fa-suitcase-rolling"></i>E-commerce
+					</a>
+					<ul class="collapse list-unstyled menu" id="homeSubmenu1">
+						<li><a href="index.html">Products <Span id="nav-nt">new</Span></a></li>
+						<li><a href="productDetails.html">Products Details <Span id="nav-nt-details">new</Span></a></li>
+						<li><a href="orders.html">Orders <Span id="nav-nt-orders">new</Span></a></li>
+						<li><a href="customers.html">Customers</a></li>
+						<li><a href="#">Invoice</a></li>
+						<li><a href="#">Pricing</a></li>
+					</ul>
+				</li>
+
+
+				<li class="dropdown">
+					<a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<i class="material-icons">apps</i>Projects
+					</a>
+					<ul class="collapse list-unstyled menu" id="homeSubmenu2">
+						<li><a href="#">Overview</a></li>
+						<li><a href="#">Details</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#" class="dashboard d-flex">
+						<i class="material-icons">message</i>Chat
+					</a>
+				</li>
+
+				<li>
+					<a href="#" class="dashboard d-flex">
+						<i class="material-icons fa-regular fa-file" style="color: #7d7d7e;"></i>File Manager
+						<span> New</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="#" class="dashboard d-flex">
+						<i class="material-icons fa-regular fa-calendar" style="color: #7d7d7e;"></i>calender
+					</a>
+				</li>
+
+				<li>
+					<a href="#" class="dashboard d-flex">
+						<i class="material-icons fa-regular fa-envelope" style="color: #7d7d7e;"></i>Email
+					</a>
+				</li>
+
+				<li class="dropdown">
+					<a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<i class="material-icons fa-solid fa-list-check" style="color: #7d7d7e;"></i>charts
+					</a>
+					<ul class="collapse list-unstyled menu" id="homeSubmenu3">
+						<li><a href="#">List</a></li>
+						<li><a href="#">Kanban</a></li>
+					</ul>
+				</li>
+
+
+				<li class="dropdown">
+					<a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						<i class="material-icons">extension</i>UI Element
+					</a>
+					<ul class="collapse list-unstyled menu" id="homeSubmenu4">
+						<li><a href="#">Pages 1</a></li>
+						<li><a href="#">Pages 2</a></li>
+						<li><a href="#">Pages 3</a></li>
+					</ul>
+				</li>
+
+
+			</ul>
+		</div>
+
+
+        <!-------page-content start----------->
+
+        <div id="content">
+
+            <div class="top-navbar d-flex justify-content-between">
+
+                <div class="d-flex align-items-center">
+                    <div class="xp-menubar mr-3">
+                        <i class="fa-solid fa-bars-progress fs-3 text-secondary cursor-pointer"></i>
+                    </div>
+
+                    <div class="xp-searchbar">
+                        <form>
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button class="btn" type="submit" id="button-addon2"><i
+                                            class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <ul class="nav navbar-nav flex-row d-flex justify-content-end align-items-center">
+
+                        <li class="dropdown nav-item">
+                            <a class="nav-link text-secondary " href="#" data-toggle="dropdown">
+                                Mega Menu <span class="dropdown-toggle ml-4"></span>
+                            </a>
+
+                            <ul class="dropdown-menu p-3"> UI
+                                <li><a href="#">Alerts</a></li>
+                                <li><a href="#">Buttons</a></li>
+                                <li><a href="#">Cards</a></li>
+                                <li><a href="#">Grid</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+                    <div class="xp-profilebar text-right">
+                        <nav class="navbar p-0">
+
+                            <ul class="nav navbar-nav flex-row">
+
+                                <ul class="nav navbar-nav flex-row d-flex justify-content-end align-items-center">
+
+                                    <li class="dropdown nav-item">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <span class=""><i class="material-icons fa-regular fa-comment"
+                                                    style="color: #6c757d;"></i></span>
+                                            <span class="notification">4</span>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown nav-item ml-1">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <i class="material-icons fa-solid fa-bell-slash"
+                                                style="color: #6c757d;"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown nav-item ml-1">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <i class="material-icons fa-regular fa-moon" style="color: #b6babe;"></i>
+                                        </a>
+                                    </li>
+
+
+                                    <li class="dropdown nav-item ml-1">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <img src="img/f.jpeg" style="width: 32px; border-radius: 50%;" alt="flag">
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown nav-item">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <img src="https://scontent.fcai23-1.fna.fbcdn.net/v/t39.30808-6/406226513_2384763138399405_5531682713407591453_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WU7Zwl0jW2MQ7kNvgEm90o2&_nc_zt=23&_nc_ht=scontent.fcai23-1.fna&_nc_gid=AfGDbD9M0oN8lWc5Y1Dv_hA&oh=00_AYApQxWFC_D-JCxK-65eE0sW7LEt8bXtMXWzHibDpIrntA&oe=672014C5"
+                                                style="width:40px; border-radius:50%;" />
+                                            <span class="xp-user-live"></span>
+                                        </a>
+                                     
+                                        <li class="dropdown nav-item">
+                                            <a class="nav-link text-secondary " href="#" data-toggle="dropdown">
+                                                Karim Ashraf <span class="dropdown-toggle ml-4"></span>
+                                            </a>
+                
+                                            <ul class="dropdown-menu p-3"> 
+                                                <li><a href="#">
+                                                    <span class="material-icons">person_outline</span>
+                                                    Profile
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <span class="material-icons">settings</span>
+                                                    Settings
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <span class="material-icons">logout</span>
+                                                    Logout
+                                                </a></li>
+
+                                            </ul>
+                                        </li>
+                                    </li>
+                                </ul>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+            <!------top-navbar-end----------->
+
+
+            <!------main-content-start----------->
+            <div class="d-flex flex-column justify-content-center m-auto">
+
+                <section>
+                    <div class="container-fluid mt-5 content">
+                        <h4>Products</h4>
+                        <div class="bg-white p-3 mb-4 rounded-1 shadow-sm">
+                           
+                            <div class="row mb-3 ">
+
+                                <div class="col-md-6 col-xl-4 mb-2 mb-md-0">
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button class="search-btn btn" type="submit" id="button-addon2"><i
+                                                    class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-xl-8">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-light btn-lg me-2 mr-3"><i
+                                                class="fa-solid fa-download" style="color: #212121;"></i>
+                                            Export</button>
+                                        <button type="button" class="btn btn-primary btn-lg"><i></i><i
+                                                class="fa-solid fa-plus"></i> New Product</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive p-3">
+                                <table class="table mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Order ID</th>
+                                            <th>Billing Name</th>
+                                            <th>Date</th>
+                                            <th>Total</th>
+                                            <th>Payment Method</th>
+                                            <th>Payment Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <td>#SK04</td>
+                                            <td>Alice Johnson</td>
+                                            <td>August 15, 2023</td>
+                                            <td>$320 USD</td>
+                                            <td>
+                                                <p class="text-secondary">
+                                                    <i class="fa-brands fa-cc-visa"></i> Visa
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span type="button" class="badge text-bg-success bg-opacity-25">
+                                                    <span class="text-success">Paid</span>
+                                                </span>
+                                            </td>
+                                            <td><button class="btn View">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <td>#SK18</td>
+                                            <td>Amy Garcia</td>
+                                            <td>August 15, 2023</td>
+                                            <td>$320 USD</td>
+                                            <td>
+                                                <p class="text-secondary">
+                                                    <i class="fa-brands fa-cc-paypal"></i> PayPal
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span type="button" class="badge text-bg-warning bg-opacity-25">
+                                                    <span class="text-warning">In process</span>
+                                                </span>
+                                            </td>
+                                            <td><button class="btn View">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <td>#SK17</td>
+                                            <td>Christopher Taylor</td>
+                                            <td>August 15, 2023</td>
+                                            <td>$320 USD</td>
+                                            <td>
+                                                <p class="text-secondary">
+                                                    <i class="fa-brands fa-cc-mastercard"></i> Mastercard
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span type="button" class="badge text-bg-danger bg-opacity-25">
+                                                    <span class="text-danger">Failed</span>
+                                                </span>
+                                            </td>
+                                            <td><button class="btn View">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <td>#SK16</td>
+                                            <td>Daniel Anderson</td>
+                                            <td>August 15, 2023</td>
+                                            <td>$320 USD</td>
+                                            <td>
+                                                <p class="text-secondary">
+                                                    <i class="fa-brands fa-cc-mastercard"></i> Mastercard
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span type="button" class="badge text-bg-success bg-opacity-25">
+                                                    <span class="text-success">Paid</span>
+                                                </span>
+                                            </td>
+                                            <td><button class="btn View">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <td>#SK07</td>
+                                            <td>David Lee</td>
+                                            <td>August 15, 2023</td>
+                                            <td>$320 USD</td>
+                                            <td>
+                                                <p class="text-secondary">
+                                                    <i class="fa-brands fa-cc-visa"></i> Visa
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span type="button" class="badge text-bg-danger bg-opacity-25">
+                                                    <span class="text-danger">Failed</span>
+                                                </span>
+                                            </td>
+                                            <td><button class="btn View">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <td>#SK05</td>
+                                            <td>Emily White</td>
+                                            <td>August 15, 2023</td>
+                                            <td>$320 USD</td>
+                                            <td>
+                                                <p class="text-secondary">
+                                                    <i class="fa-brands fa-cc-visa"></i> Visa
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span type="button" class="badge text-bg-success bg-opacity-25">
+                                                    <span class="text-success">Paid</span>
+                                                </span>
+                                            </td>
+                                            <td><button class="btn View">View</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <td>#SK08</td>
+                                            <td>Emily White</td>
+                                            <td>August 15, 2023</td>
+                                            <td>$320 USD</td>
+                                            <td>
+                                                <p class="text-secondary">
+                                                    <i class="fa-brands fa-cc-paypal"></i> PayPal
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span type="button" class="badge text-bg-success bg-opacity-25">
+                                                    <span class="text-success">Paid</span>
+                                                </span>
+                                            </td>
+                                            <td><button class="btn View">View</button></td>
+                                        </tr>
+                                        <!-- More product rows can be added here -->
+                                    </tbody>
+                                </table>
+                                <div class="d-flex justify-content-between flex-wrap p-3">
+                                    <p class="text-secondary">Showing 1 to 6 of 12 entries</p>
+                                    <!-- pagination -->
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active" aria-current="page">
+                                                <a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!------main-content-end----------->
+
+
+
+            <!----footer-design------------->
+
+            <footer class="footer mt-3">
+                <div class="container-Footer d-flex justify-content-between align-items-center">
+                    <div class="container-links">
+                        <a href="#" class="text-decoration-none text-black-50 p-1">Support</a>
+                        <a href="#" class="text-decoration-none text-black-50 p-1">Help Center</a>
+                        <a href="#" class="text-decoration-none text-black-50 p-1">Privacy</a>
+                        <a href="#" class="text-decoration-none text-black-50 p-1"> Terms of Service</a>
+                    </div>
+                    <p class="text-black-50">© 2024 - AppStack</p>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".xp-menubar").on('click', function () {
+                $("#sidebar").toggleClass('active');
+                $("#content").toggleClass('active');
+            });
+
+            $('.xp-menubar,.body-overlay').on('click', function () {
+                $("#sidebar,.body-overlay").toggleClass('show-nav');
+            });
+
+        });
+
+        function changeImage(imagePath) {
+            document.getElementById('mainImage').src = imagePath;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

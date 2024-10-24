@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>crud dashboard</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <!-------sidebar--design------------>
+
+        <div id="sidebar">
+
+            <div class="sidebar-header">
+                <h3 class="d-flex justify-content-center align-items-center "><i
+                        class="material-icons fa-solid fa-layer-group" style="color: #84aef2;"></i><span class="pl-1">
+                        AppStack</span></h3>
+            </div>
+
+            <ul class="list-unstyled component m-0">
+                <li class="active">
+                    <a href="#" class="dashboard d-flex">
+                        <i class="material-icons">dashboard</i>dashboard
+                        <span id="nav-nt">5</span></a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="material-icons fa-solid fa-suitcase-rolling"></i>E-commerce
+                    </a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+                        <li><a href="index.html">Products <Span id="nav-nt">new</Span></a></li>
+                        <li><a href="productDetails.html">Products Details <Span id="nav-nt-details">new</Span></a></li>
+                        <li><a href="orders.html">Orders <Span id="nav-nt-orders">new</Span></a></li>
+                        <li><a href="customers.html">Customers</a></li>
+                        <li><a href="#">Invoice</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="material-icons">apps</i>Projects
+                    </a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu2">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Details</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="dashboard d-flex">
+                        <i class="material-icons">message</i>Chat
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="dashboard d-flex">
+                        <i class="material-icons fa-regular fa-file" style="color: #7d7d7e;"></i>File Manager
+                        <span> New</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="dashboard d-flex">
+                        <i class="material-icons fa-regular fa-calendar" style="color: #7d7d7e;"></i>calender
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="dashboard d-flex">
+                        <i class="material-icons fa-regular fa-envelope" style="color: #7d7d7e;"></i>Email
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="material-icons fa-solid fa-list-check" style="color: #7d7d7e;"></i>charts
+                    </a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu3">
+                        <li><a href="#">List</a></li>
+                        <li><a href="#">Kanban</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="material-icons">extension</i>UI Element
+                    </a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu4">
+                        <li><a href="#">Pages 1</a></li>
+                        <li><a href="#">Pages 2</a></li>
+                        <li><a href="#">Pages 3</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+        <!-------page-content start----------->
+
+        <div id="content">
+
+            <div class="top-navbar d-flex justify-content-between">
+
+                <div class="d-flex align-items-center">
+                    <div class="xp-menubar mr-3">
+                        <i class="fa-solid fa-bars-progress fs-3 text-secondary cursor-pointer"></i>
+                    </div>
+
+                    <div class="xp-searchbar">
+                        <form>
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button class="btn" type="submit" id="button-addon2"><i
+                                            class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <ul class="nav navbar-nav flex-row d-flex justify-content-end align-items-center">
+
+                        <li class="dropdown nav-item">
+                            <a class="nav-link text-secondary " href="#" data-toggle="dropdown">
+                                Mega Menu <span class="dropdown-toggle ml-4"></span>
+                            </a>
+
+                            <ul class="dropdown-menu p-3"> UI
+                                <li><a href="#">Alerts</a></li>
+                                <li><a href="#">Buttons</a></li>
+                                <li><a href="#">Cards</a></li>
+                                <li><a href="#">Grid</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+                    <div class="xp-profilebar text-right">
+                        <nav class="navbar p-0">
+
+                            <ul class="nav navbar-nav flex-row">
+
+                                <ul class="nav navbar-nav flex-row d-flex justify-content-end align-items-center">
+
+                                    <li class="dropdown nav-item">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <span class=""><i class="material-icons fa-regular fa-comment"
+                                                    style="color: #6c757d;"></i></span>
+                                            <span class="notification">4</span>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown nav-item ml-1">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <i class="material-icons fa-solid fa-bell-slash"
+                                                style="color: #6c757d;"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                            <li><a href="#">You Have 4 New Messages</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown nav-item ml-1">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <i class="material-icons fa-regular fa-moon" style="color: #b6babe;"></i>
+                                        </a>
+                                    </li>
+
+
+                                    <li class="dropdown nav-item ml-1">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <img src="img/f.jpeg" style="width: 32px; border-radius: 50%;" alt="flag">
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown nav-item">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <img src="https://scontent.fcai23-1.fna.fbcdn.net/v/t39.30808-6/406226513_2384763138399405_5531682713407591453_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WU7Zwl0jW2MQ7kNvgEm90o2&_nc_zt=23&_nc_ht=scontent.fcai23-1.fna&_nc_gid=AfGDbD9M0oN8lWc5Y1Dv_hA&oh=00_AYApQxWFC_D-JCxK-65eE0sW7LEt8bXtMXWzHibDpIrntA&oe=672014C5"
+                                                style="width:40px; border-radius:50%;" />
+                                            <span class="xp-user-live"></span>
+                                        </a>
+
+                                    <li class="dropdown nav-item">
+                                        <a class="nav-link text-secondary " href="#" data-toggle="dropdown">
+                                            Karim Ashraf <span class="dropdown-toggle ml-4"></span>
+                                        </a>
+
+                                        <ul class="dropdown-menu p-3">
+                                            <li><a href="#">
+                                                    <span class="material-icons">person_outline</span>
+                                                    Profile
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <span class="material-icons">settings</span>
+                                                    Settings
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <span class="material-icons">logout</span>
+                                                    Logout
+                                                </a></li>
+
+                                        </ul>
+                                    </li>
+                                    </li>
+
+                                </ul>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+            <!------top-navbar-end----------->
+
+
+            <!------main-content-start----------->
+
+            <div class="d-flex flex-wrap justify-content-between m-auto w-100">
+
+                <div class="container-fluid p-5">
+
+                    <h1 class="h3 mb-3">Customers</h1>
+
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="row mb-3 ">
+                                        <div class="col-md-6 col-xl-4 mb-2 mb-md-0">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" placeholder="Search">
+                                                <div class="input-group-append">
+                                                    <button class="search-btn btn" type="submit" id="button-addon2"><i
+                                                            class="fa-solid fa-magnifying-glass"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-xl-8">
+                                            <div class="d-flex justify-content-end">
+                                                <button type="button" class="btn btn-light btn-lg me-2 mr-3"><i
+                                                        class="fa-solid fa-download" style="color: #212121;"></i>
+                                                    Export</button>
+                                                <button type="button" class="btn btn-primary btn-lg"><i></i><i
+                                                        class="fa-solid fa-plus"></i> New Product</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <table id="datatables-customers" class="table w-100">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-start">#</th>
+                                                <th>Name</th>
+                                                <th>Company</th>
+                                                <th>Email</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Garrett Winters</td>
+                                                <td>Good Guys</td>
+                                                <td>garrett@winters.com</td>
+                                                <td><span class="badge badge-subtle-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Ashton Cox</td>
+                                                <td>Levitz Furniture</td>
+                                                <td>ashton@cox.com</td>
+                                                <td><span class="badge badge-subtle-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Sonya Frost</td>
+                                                <td>Child World</td>
+                                                <td>sonya@frost.com</td>
+                                                <td><span class="badge badge-subtle-danger">Deleted</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Jena Gaines</td>
+                                                <td>Helping Hand</td>
+                                                <td>jena@gaines.com</td>
+                                                <td><span class="badge badge-subtle-warning">Inactive</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Quinn Flynn</td>
+                                                <td>Good Guys</td>
+                                                <td>quinn@flynn.com</td>
+                                                <td><span class="badge badge-subtle-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Charde Marshall</td>
+                                                <td>Price Savers</td>
+                                                <td>charde@marshall.com</td>
+                                                <td><span class="badge badge-subtle-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Haley Kennedy</td>
+                                                <td>Helping Hand</td>
+                                                <td>haley@kennedy.com</td>
+                                                <td><span class="badge badge-subtle-danger">Deleted</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Tatyana Fitzpatrick</td>
+                                                <td>Good Guys</td>
+                                                <td>tatyana@fitzpatrick.com</td>
+                                                <td><span class="badge badge-subtle-success">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="img/p.png" width="32" height="32"
+                                                        class="rounded-circle my-n1" alt="Avatar"></td>
+                                                <td>Michael Silva</td>
+                                                <td>Red Robin Stores</td>
+                                                <td>michael@silva.com</td>
+                                                <td><span class="badge badge-subtle-success">Active</span></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 ">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-actions float-end">
+                                        <div class="dropdown position-relative">
+                                            <a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+                                                <i class="align-middle" data-lucide="more-horizontal"></i>
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title mb-0">Karim Ashraf</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-0">
+                                        <div class="col-sm-3 col-xl-12 col-xxl-3 text-center">
+                                            <img src="https://scontent.fcai23-1.fna.fbcdn.net/v/t39.30808-6/406226513_2384763138399405_5531682713407591453_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WU7Zwl0jW2MQ7kNvgEm90o2&_nc_zt=23&_nc_ht=scontent.fcai23-1.fna&_nc_gid=AfGDbD9M0oN8lWc5Y1Dv_hA&oh=00_AYApQxWFC_D-JCxK-65eE0sW7LEt8bXtMXWzHibDpIrntA&oe=672014C5"
+                                                width="64" height="64" class="rounded-circle mt-2" alt="Angelica Ramos">
+                                        </div>
+                                        <div class="col-sm-9 col-xl-12 col-xxl-9">
+                                            <strong>About me</strong>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+
+                                    <table class="table table-sm ">
+                                        <tbody>
+                                            <tr>
+                                                <th>Name</th>
+                                                <td class="fs-5">Karim Ashraf</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Company</th>
+                                                <td class="fs-6">career180</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Email</th>
+                                                <td class="fs-6">karimashraf000@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Status</th>
+                                                <td><span class="badge badge-subtle-success">Active</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <hr />
+
+                                    <strong>Activity</strong>
+
+                                    <ul class="timeline mt-2 mb-0">
+                                        <li class="timeline-item">
+                                            <strong>Signed out</strong>
+                                            <span class="float-end text-muted text-sm">30m ago</span>
+                                            <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit...</p>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <strong>Created invoice #1204</strong>
+                                            <span class="float-end text-muted text-sm">2h ago</span>
+                                            <p>Sed aliquam ultrices mauris. Integer ante arcu...</p>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <strong>Discarded invoice #1147</strong>
+                                            <span class="float-end text-muted text-sm">3h ago</span>
+                                            <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit...</p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!------main-content-end----------->
+
+
+
+            <!----footer-design------------->
+
+            <footer class="footer mt-5">
+                <div class="container-Footer d-flex justify-content-between align-items-center">
+                    <div class="container-links">
+                        <a href="#" class="text-decoration-none text-black-50 p-1">Support</a>
+                        <a href="#" class="text-decoration-none text-black-50 p-1">Help Center</a>
+                        <a href="#" class="text-decoration-none text-black-50 p-1">Privacy</a>
+                        <a href="#" class="text-decoration-none text-black-50 p-1"> Terms of Service</a>
+                    </div>
+                    <p class="text-black-50">© 2024 - AppStack</p>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".xp-menubar").on('click', function () {
+                $("#sidebar").toggleClass('active');
+                $("#content").toggleClass('active');
+            });
+
+            $('.xp-menubar,.body-overlay').on('click', function () {
+                $("#sidebar,.body-overlay").toggleClass('show-nav');
+            });
+
+        });
+
+        function changeImage(imagePath) {
+            document.getElementById('mainImage').src = imagePath;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
